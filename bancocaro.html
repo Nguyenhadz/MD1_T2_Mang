@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Ca_ro game simple:</h3>
+<p id="game"></p>
+<input type="button" onclick="changeThisgame()" value="Change Value">
+<script>
+    let banco = [];
+    let value = '';
+    for ( let i=0; i<10; i++){
+        banco[i] = new Array(0,0,0,0,0,0,0,0,0,0);
+    }
+    for ( let x = 0; x<10; x++){
+        value += '<br>';
+        for ( let y = 0; y<10; y++){
+            value += banco[x][y] + '&nbsp;&nbsp';
+        }
+    }
+    document.getElementById('game').innerHTML = value;
+    function changeThisgame(){
+        let a = prompt('X:');
+        let b = prompt('Y:');
+        value = '';
+        banco[a][b] = 'x';
+        for ( let x = 0; x<10; x++){
+            value += '<br>';
+            for ( let y = 0; y<10; y++){
+                value += banco[x][y] + '&nbsp;&nbsp';
+            }
+        }
+        document.getElementById('game').innerHTML = value;
+    }
+</script>
+
+
+</body>
+</html>
