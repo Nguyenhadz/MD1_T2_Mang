@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let x = ['a',1,2,3,4,5,6,7,8,9,10,'c','d','b'];
+  b = prompt('Nhập vào giá trị cần kiểm tra:');
+  let y = [];
+  for (let i = 0; i<x.length; i++){
+
+    if ( b == x[i] ) {
+      y.push(i);
+    }
+  }
+  if ( y.length>0 ){
+    document.write("Value " + b + " found at " + y)
+  } else
+    document.write("Value " + b + " not found")
+</script>
+
+</body>
+</html>
