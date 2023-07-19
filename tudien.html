@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập từ:</h3>
+<input type="text" id="input">
+<input type="button" onclick="haha()" value="Translate"/>
+<p id="export"></p>
+<script>
+  let english = [ 'banana', 'apple', 'cherry', 'plum'];
+  let vietnamese = [ 'Quả chuối', 'Quả táo', 'Quả anh đào', 'Quả mận'];
+  function haha() {
+    let a = -1;
+    let x= document.getElementById('input').value;
+    let y = x.toLowerCase();
+    for (let i = 0; i<english.length; i++) {
+      if (y === english[i]) {
+        a = i;
+        document.getElementById('export').innerHTML = vietnamese[a];
+        break;
+      }
+    }
+    if (a === -1) {
+      document.getElementById('export').innerHTML = 'Không có dữ liệu';
+    }
+  }
+</script>
+</body>
+</html>
