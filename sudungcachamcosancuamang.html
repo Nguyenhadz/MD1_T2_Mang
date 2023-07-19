@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Nhập từng phần tử của mảng:</h1>
+<label><input type="text" id="phantu"/></label>
+<input type="button" value="Input" onclick="inputPT()">
+<input type="button" value="Confirm" onclick="confirmM()"><br>
+<input type="button" value="Hàm Join" onclick="join()">
+
+<p id="export1"></p>
+<p id="export2"></p>
+
+  <script>
+    let m = [];
+    function inputPT(){
+      let a = document.getElementById('phantu').value;
+      console.log(a)
+      m.push(a);
+      document.getElementById('phantu').value = '';
+    }
+    console.log(m)
+    function confirmM(){
+      document.getElementById('export1').innerHTML = 'Mảng của bạn là: m = [' + m + ']';
+    }
+
+    // Nối các phần tử trong một mảng chuỗi
+    function join(){
+      let c = m.join("-");
+      document.getElementById('export2').innerHTML = c;
+    }
+  </script>
+
+
+<!--   Chèn dấu - vào giữa 2 số chẵn-->
+<script>
+  let a = prompt('Nhập vào một chuỗi số bất kì:');
+  let arr = a.split("");
+  for ( let i =0; i<arr.length ; i++){
+    if ( i > 0 && arr[i]%2===0 && arr[i-1]%2===0){
+      document.write('-');
+    }
+    document.write(arr[i]);
+  }
+</script>
+
+
+<!-- Đổi kí tự thường thành hoa 1-->
+<script>
+  let a = prompt('Nhập vào chuỗi kí tự bất kì:');
+  let arr = a.split("");
+  console.log(arr)
+  for (let i = 0; i< arr.length; i++ ){
+    if (i===0 || arr[i-1]===' '){
+      document.write(arr[i].toLowerCase());
+    } else {
+      document.write(arr[i].toUpperCase());
+    }
+  }
+</script>
+
+
+ Đổi kí tự thường thành in hoa 2
+<script>
+ let a = prompt('Nhập chuỗi kí tự bất kì:');
+ let upper = a.toUpperCase();
+ let lower = a.split("");
+ for ( let i = 0; i< lower.length; i++){
+   if (a[i] === upper[i]){
+     document.write(a[i].toLowerCase());
+   } else {
+     document.write(a[i].toUpperCase());
+   }
+
+ }
+</script>
+</body>
+</html>
