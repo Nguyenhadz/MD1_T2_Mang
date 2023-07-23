@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  haha();
+  function haha() {
+    let chain = prompt('Input random chain:')
+    chain = chain.toLowerCase();
+    // let arr = chain.split("");
+    // console.log(arr)
+    // console.log(arr.charAt(0))
+    let sum = 0;
+    for ( let x=0; x<chain.length; x++){
+      if ( (chain.charAt(x) === 'a') || (chain.charAt(x) === 'u') || (chain.charAt(x) === 'o') || (chain.charAt(x) === 'e') || (chain.charAt(x) === 'i')) {
+          sum++
+      }
+    }
+    document.write(sum)
+  }
+</script>
+
+</body>
+</html>

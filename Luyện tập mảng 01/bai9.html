@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1><b>Khởi tạo mảng:</b></h1>
+<label><input type="text" placeholder="Nhập phần tử" id="inputText"></label>
+<input type="button" onclick="addElement1()" value="Add Array 1">
+<input type="button" onclick="addElement2()" value="Add Array 2">
+<input type="button" onclick="sum()" value="Sum">
+<p id="haha"></p>
+<script>
+  let b = 0;
+  let arr1 = [];
+  let arr2 = [];
+  function addElement1(){
+    let element = document.getElementById('inputText').value;
+    if (element === ''){
+      alert('Bạn chưa nhập gì');
+    } else {
+      arr1.push(element);
+      document.getElementById('inputText').value = '';
+    }
+    return arr1;
+  }
+  function addElement2(){
+    let element = document.getElementById('inputText').value;
+    if (element === ''){
+      alert('Bạn chưa nhập gì');
+    } else {
+      arr2.push(element);
+      document.getElementById('inputText').value = '';
+    }
+    return arr2;
+  }
+  function sum(){
+    for (let i=0; i<arr2.length; i++){
+      arr1.push(arr2[i])
+
+    }
+    document.getElementById('haha').innerHTML =  `Mảng sau khi nối là: [${arr1}]`;
+  }
+</script>
+
+</body>
+</html>

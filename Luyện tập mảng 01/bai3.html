@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1><b>Khởi tạo mảng:</b></h1>
+<label><input type="text" placeholder="Nhập phần tử" id="inputText"></label>
+<input type="button" onclick="addElement()" value="Add">
+<input type="button" onclick="checkElement()" value="Check">
+<p id="haha"></p>
+<script>
+  let b = 0;
+  let arr = [];
+  function addElement(){
+
+    let element = document.getElementById('inputText').value;
+    if (element === ''){
+      alert('Bạn chưa nhập gì');
+    } else {
+      arr.push(element);
+      document.getElementById('inputText').value = '';
+    }
+    return arr;
+  }
+  function checkElement(){
+    let TB = 0;
+    let max = arr[0];
+    for (let i=0; i<arr.length; i++){
+      TB += parseInt(arr[i]);
+      if ( max < arr[i]){
+        max = arr[i];
+      }
+
+    }
+    console.log(max)
+    let a = TB/arr.length;
+    document.getElementById('haha').innerHTML =  `Số nguyên lớn nhất trong mảng là ${max}, Trung bình các phần tử của mảng là ${a}`;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1><b>Khởi tạo mảng:</b></h1>
+<label><input type="text" placeholder="Nhập phần tử" id="inputText"></label>
+<input type="button" onclick="addElement()" value="Add">
+<input type="button" onclick="checkElement()" value="Check">
+<p id="haha"></p>
+<script>
+  let b = 0;
+  let arr = [];
+  function addElement(){
+
+    let element = document.getElementById('inputText').value;
+    if (element === ''){
+      alert('Bạn chưa nhập gì');
+    } else {
+      arr.push(element);
+      document.getElementById('inputText').value = '';
+    }
+    return arr;
+  }
+  function checkElement(){
+    let x = prompt('Nhập số nguyên V:')
+    for (let i=0; i<arr.length; i++){
+      if ( parseInt(x) === parseInt(arr[i])){
+        arr.splice(i,1);
+        arr.push(0)
+      }
+    }
+    document.getElementById('haha').innerHTML = arr;
+  }
+
+</script>
+
+</body>
+</html>
